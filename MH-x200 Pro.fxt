@@ -7,7 +7,7 @@
 fixture
   manufacturer = "STAIRVILLE"
   name = "MH-x200 Pro"
-  version = 1.00
+  version = 1.01
 
   attribute
     name = "PAN"
