@@ -7,7 +7,7 @@
 fixture
   manufacturer = "STAIRVILLE"
   name = "MH-x200 Pro"
-  version = 1.01
+  version = 1.02
 
   attribute
     name = "PAN"
@@ -272,13 +272,13 @@ fixture
     type = N
     attribList = 15
     stop = (    0:  9),N,"Free"
-    stop = (   10: 14),N,"b/o rot"
-    stop = (   15: 19),N,"b/o col"
-    stop = (   20: 24),N,"no b/o"
-    stop = (   25: 29),N,"b/o gob"
-    stop = (   30: 34),N,"no b/o"
-    stop = (   35: 39),N,"no b/o"
-    stop = (   40: 44),N,"no b/o"
+    stop = (   10: 14),N,"b!o rot"
+    stop = (   15: 19),N,"b!o col"
+    stop = (   20: 24),N,"no b!o"
+    stop = (   25: 29),N,"b!o gob"
+    stop = (   30: 34),N,"no b!o"
+    stop = (   35: 39),N,"no b!o"
+    stop = (   40: 44),N,"no b!o"
     stop = (   45: 49),N,"reset ROT"
     stop = (   50: 54),N,"reset INC"
     stop = (   55: 59),N,"reset COL"
