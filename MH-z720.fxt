@@ -1,0 +1,249 @@
+////////////////////// Stairville MH-z720
+// LSC Lighting Systems
+// maXim fixture template
+// Stairville MH-z720
+// Author B. Smith 23/6/2015
+
+fixture
+  manufacturer = "STAIRVILLE"
+  name = "MH-z720"
+  version = 1.00
+  
+  attribute
+    name = "PAN"
+    channel = 1
+    homeVal = 127
+  
+  attribute
+    name = "TILT"
+    channel = 2
+    homeVal = 127
+  
+  attribute
+    name = "SPEED"
+    channel = 3
+    homeVal = 0
+  
+  attribute
+    name = "RED"
+    channel = 4
+    homeVal = 0
+  
+  attribute
+    name = "GREEN"
+    channel = 5
+    homeVal = 0
+  
+  attribute
+    name = "BLUE"
+    channel = 6
+    homeVal = 0
+  
+  attribute
+    name = "WHITE"
+    channel = 7
+    homeVal = 0
+  
+  attribute
+    name = "PREPROGRAMMED LX FX"
+    channel = 8
+    homeVal = 0
+  
+  attribute
+    name = "FX SPEED"
+    channel = 9
+    homeVal = 0
+  
+  attribute
+    name = "INTENSITY"
+    channel = 10
+  
+  attribute
+    name = "SHUTTER"
+    channel = 11
+    homeVal = 255
+  
+  attribute
+    name = "ZOOM"
+    channel = 12
+    homeVal = 0
+  
+  attribute
+    name = "SPECIAL SETTINGS"
+    channel = 13
+    homeVal = 0
+  
+  attribute
+    name = "MOVEMENT PATTERN"
+    channel = 14
+    homeVal = 0
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  parameter
+    name = "-PAN-"
+    displayerNum = 1
+    type = F
+    attribList = 1
+    stop = (M 0:255),D,0,540,"Pan="
+  
+  parameter
+    name = "-TILT-"
+    displayerNum = 2
+    type = F
+    attribList = 2
+    stop = (M 0:255),D,0,270,"Ti@="
+  
+  parameter
+    name = "-RED-"
+    displayerNum = 3
+    type = C
+    attribList = 4
+    stop = (M 0:255),2,"Red="
+  
+  parameter
+    name = "-GREEN-"
+    displayerNum = 4
+    type = C
+    attribList = 5
+    stop = (M 0:255),2,"Grn="
+  
+  parameter
+    name = "-BLUE-"
+    displayerNum = 5
+    type = C
+    attribList = 6
+    stop = (M 0:255),2,"Blu="
+  
+  parameter
+    name = "-WHITE-"
+    displayerNum = 6
+    type = C
+    attribList = 7
+    stop = (M 0:255),2,"Wht="
+  
+  parameter
+    name = "-ZOOM-"
+    displayerNum = 7
+    type = F
+    attribList = 12
+    stop = (M 0:255),2,"Zoom="
+  
+  parameter
+    name = "-SHUTTER-"
+    displayerNum = 8
+    type = B
+    attribList = 11
+    stop = (   0: 19),N,"Shtr Clsd"
+    stop = (  20: 24),N,"Shtr Open"
+    stop = (R 65: 69),N,"Shtr Open"
+    stop = (R 85: 89),N,"Shtr Open"
+    stop = (R105:109),N,"Shtr Open"
+    stop = (R125:129),N,"Shtr Open"
+    stop = (R145:149),N,"Shtr Open"
+    stop = (R165:169),N,"Shtr Open"
+    stop = (R185:189),N,"Shtr Open"
+    stop = (R205:209),N,"Shtr Open"
+    stop = (R225:229),N,"Shtr Open"
+    stop = (R245:255),N,"Shtr Open"
+    
+    stop = (M 25: 64),2,"Strobe"
+    stop = (M 70: 84),2,"Strobe 2"
+    stop = (M 90:104),2,"Strobe 3"
+    stop = (M110:124),2,"Strobe 4"
+    stop = (M130:144),2,"Strobe 5"
+    stop = (M150:164),2,"Strobe 6"
+    stop = (M170:184),2,"Pulse 1"
+    stop = (M190:204),2,"Pulse 2"
+    stop = (M210:224),2,"Pulse 3"
+    stop = (M230:244),2,"Pulse 4"
+  
+  parameter
+    name = "-SPEC-"
+    displayerNum = 9
+    type = B
+    attribList = 13
+    stop = (   0:  9),N,"No func"
+    stop = (  10: 14),N,"Rot Inc Int"
+    stop = (R 15: 49),N,"No func"
+    stop = (  50: 54),N,"Reset Pan"
+    stop = (  55: 59),N,"Reset Tilt"
+    stop = (  60: 64),N,"Reset Zoom"
+    stop = (R 65: 69),N,"No func"
+    stop = (  70: 74),N,"Reset"
+    stop = (R 75: 79),N,"No func"
+    stop = (  80: 84),N,"All invert"
+    stop = (  85: 89),N,"Pan invert"
+    stop = (  90: 94),N,"Tilt invert"
+    stop = (  95: 99),N,"Pan uninvert"
+    stop = ( 100:104),N,"Tilt uninvert"
+    stop = ( 105:109),N,"All uninvert"
+    stop = ( 110:114),N,"Speed normal"
+    stop = ( 115:119),N,"Speed fast"
+    stop = ( 120:124),N,"Speed slow"
+    stop = ( 125:129),N,"Fan Max"
+    stop = ( 130:134),N,"Fan Auto"
+    stop = ( 135:139),N,"Dim fast"
+    stop = ( 140:144),N,"Dim slow"
+    stop = (R145:255),N,"No func"
+  
+  parameter
+    name = "-MVT-"
+    displayerNum = 10
+    type = F
+    attribList = 14
+    stop = (   0:  7),N,"No mvt"
+    stop = (   8: 23),N,"Mvt 1"
+    stop = (  24: 39),N,"Mvt 2"
+    stop = (  40: 55),N,"Mvt 3"
+    stop = (  56: 71),N,"Mvt 4"
+    stop = (  72: 87),N,"Mvt 5"
+    stop = (  88:103),N,"Mvt 6"
+    stop = ( 104:119),N,"Mvt 7"
+    stop = ( 120:135),N,"Mvt 8"
+    stop = ( 136:151),N,"Mvt 1 SC"
+    stop = ( 152:167),N,"Mvt 2 SC"
+    stop = ( 168:183),N,"Mvt 3 SC"
+    stop = ( 184:199),N,"Mvt 4 SC"
+    stop = ( 200:215),N,"Mvt 5 SC"
+    stop = ( 216:231),N,"Mvt 6 SC"
+    stop = ( 232:247),N,"Mvt 7 SC"
+    stop = ( 248:255),N,"Mvt 8 SC"
+  
+  parameter
+    name = "-FX-"
+    displayerNum = 11
+    type = B
+    attribList = 8
+    stop = (   0: 15),N,"No fx"
+    stop = (  16: 31),N,"FX 1"
+    stop = (  32: 47),N,"FX 2"
+    stop = (  48: 63),N,"FX 3"
+    stop = (  64: 79),N,"FX 4"
+    stop = (  80: 95),N,"FX 5"
+    stop = (  96:111),N,"FX 6"
+    stop = ( 112:127),N,"FX 7"
+    stop = ( 128:143),N,"FX 8"
+    stop = ( 144:159),N,"FX 9"
+    stop = ( 160:175),N,"FX 10"
+    stop = ( 176:191),N,"FX 11"
+    stop = ( 192:207),N,"FX 12"
+    stop = ( 208:223),N,"FX 13"
+    stop = ( 224:239),N,"FX 14"
+    stop = ( 240:255),N,"FX 15"
+  
+  parameter
+    name = "-FXSPD-"
+    displayerNum = 12
+    type = B
+    attribList = 9
+    stop = (M 0:255),2,"FX spd="
+  
+  parameter
+    name = "-SPD-"
+    displayerNum = 13
+    type = F
+    attribList = 3
+    stop = (M 0:255),2,"Speed="
+
+end
