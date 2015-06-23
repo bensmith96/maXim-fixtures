@@ -1,0 +1,297 @@
+////////////////////////////// Stairville MH-x200 Pro
+// LSC Lighting Systems
+// maXim fixture template
+// Stairville MH-x200 Pro
+// Author B. Smith 22/6/15
+
+fixture
+  manufacturer = "STAIRVILLE"
+  name = "MH-x200 Pro"
+  version = 1.00
+
+  attribute
+    name = "PAN"
+    channel = 1
+    fineChan = 3
+    homeVal = 32768
+
+  attribute
+    name = "TILT"
+    channel = 2
+    fineChan = 4
+    homeVal = 32768
+
+  attribute
+    name = "SPEED"
+    channel = 5
+    homeVal = 255
+
+  attribute
+    name = "COLOUR"
+    channel = 6
+    homeVal = 0
+
+  attribute
+    name = "SHUTTER"
+    channel = 7
+    homeVal = 255
+
+  attribute
+    name = "INTENSITY"
+    channel = 8
+
+  attribute
+    name = "GOBO 1"
+    channel = 9
+    homeVal = 0
+
+  attribute
+    name = "GOBO ROT"
+    channel = 10
+    homeVal = 0
+
+  attribute
+    name = "GOBO 2"
+    channel = 11
+    homeVal = 0
+
+  attribute
+    name = "FOCUS"
+    channel = 12
+    homeVal = 0
+
+  attribute
+    name = "IRIS"
+    channel = 13
+    homeVal = 0
+
+  attribute
+    name = "PRISM"
+    channel = 14
+    homeVal = 0
+
+  attribute
+    name = "CHANNEL DEPENDENT SETTINGS"
+    channel = 15
+    homeVal = 0
+
+  attribute
+    name = "EFFECTS"
+    channel = 16
+    homeVal = 0
+
+//////////////////////////////////////////////////////////////////////////////
+
+  parameter
+    name = "-PAN-"
+    displayerNum = 1
+    type = F
+    attribList = 1
+    stop = (M 0:65535),D,0,540,"Pan="
+
+  parameter
+    name = "-TILT-"
+    displayerNum = 2
+    type = F
+    attribList = 2
+    stop = (M 0:65535),D,0,270,"Ti@="
+
+  parameter
+    name = "-COLOUR-"
+    displayerNum = 3
+    type = C
+    attribList = 6
+    stop = (    0:  7),N,"White"
+    stop = (    8: 15),N,"Blue"
+    stop = (   16: 23),N,"Yellow"
+    stop = (   24: 31),N,"Pink"
+    stop = (   32: 39),N,"Green"
+    stop = (   40: 47),N,"Red"
+    stop = (   48: 55),N,"Light Blue"
+    stop = (   56: 63),N,"Orange Red"
+    stop = (R  64: 66),N,"White"
+    
+    stop = (M  67: 78),1,"White to Blue"
+    stop = (M  79: 92),1,"Blue to Yellow"
+    stop = (M  93:107),1,"Yellow to Pink"
+    stop = (M 108:120),1,"Pink to Green"
+    stop = (M 121:136),1,"Green to Red"
+    stop = (M 137:152),1,"Red to LBlue"
+    stop = (M 153:170),1,"LBlue to ORed"
+    stop = (M 171:212),1,"Col>:"
+    stop = (M 213:255),1,"Col<:"
+
+  parameter
+    name = "-GOBO1-"
+    displayerNum = 4
+    type = B
+    attribList = 9
+    stop = (    0:  9),N,"No Gobo"
+    stop = (   10: 19),N,"Gobo 2"
+    stop = (   20: 29),N,"Gobo 3"
+    stop = (   30: 39),N,"Gobo 4"
+    stop = (   40: 49),N,"Gobo 5"
+    stop = (   50: 59),N,"Gobo 6"
+    stop = (   60: 69),N,"Gobo 7"
+    stop = (   70: 79),N,"Gobo 8"
+    
+    stop = (M  80: 99),1,"G2 Shk:"
+    stop = (M 100:119),1,"G3 Shk:"
+    stop = (M 120:139),1,"G4 Shk:"
+    stop = (M 140:159),1,"G5 Shk:"
+    stop = (M 160:179),1,"G6 Shk:"
+    stop = (M 180:199),1,"G7 Shk:"
+    stop = (M 200:219),1,"G8 Shk:"
+    stop = (M 220:237),1,"Gobo1>:"
+    stop = (M 238:255),1,"Gobo1<:"
+
+  parameter
+    name = "-GOBOROT-"
+    displayerNum = 5
+    type = B
+    attribList = 10
+    stop = (    0: 10),N,"No Rot"
+    
+    stop = (M  11:127),D,0,360,"Rot:"
+    stop = (M 128:191),1,"Gobo>:"
+    stop = (M 192:255),1,"Gobo<:"
+
+  parameter
+    name = "-GOBO2-"
+    displayerNum = 6
+    type = B
+    attribList = 11
+    stop = (    0:  9),N,"No Gobo"
+    stop = (   10: 19),N,"Gobo 2"
+    stop = (   20: 29),N,"Gobo 3"
+    stop = (   30: 39),N,"Gobo 4"
+    stop = (   40: 49),N,"Gobo 5"
+    stop = (   50: 59),N,"Gobo 6"
+    stop = (   60: 69),N,"Gobo 7"
+    stop = (   70: 79),N,"Gobo 8"
+    stop = (   80: 89),N,"Gobo 9"
+    stop = (R  90: 91),N,"No Gobo"
+    
+    stop = (M  92:107),1,"G2 Shk:"
+    stop = (M 108:123),1,"G3 Shk:"
+    stop = (M 124:139),1,"G4 Shk:"
+    stop = (M 140:155),1,"G5 Shk:"
+    stop = (M 156:171),1,"G6 Shk:"
+    stop = (M 172:187),1,"G7 Shk:"
+    stop = (M 188:203),1,"G8 Shk:"
+    stop = (M 204:219),1,"G9 Shk:"
+    stop = (M 220:237),1,"Gobo2>:"
+    stop = (M 238:255),1,"Gobo2<:"
+
+  parameter
+    name = "-FOCUS-"
+    displayerNum = 7
+    type = B
+    attribList = 13
+    stop = (M 0:255),2,"Focus="
+
+  parameter
+    name = "-PRISM-"
+    displayerNum = 8
+    type = B
+    attribList = 14
+    stop = (    0:  7),N,"No Prsm"
+    stop = (    8: 15),N,"Prism"
+    stop = (R 240:255),N,"Prism"
+    
+    stop = (M  16:127),2,"Prsm>:"
+    stop = (M 128:239),2,"Prsm<:"
+
+  parameter
+    name = "-IRIS-"
+    displayerNum = 9
+    type = B
+    attribList = 13
+    stop = (M   0: 63),2,"Iris:"
+    stop = (M  64:127),1,"AZoom:"
+    stop = (  128:191),N,"Slo,Fas"
+    stop = (  192:255),N,"Fas,Slo"
+
+  parameter
+    name = "-SHUTTER-"
+    displayerNum = 10
+    type = B
+    attribList = 7
+    stop = (    0:  7),N,"Shtr Clsd"
+    stop = (    8: 22),N,"Shtr Open"
+    stop = (R  86:100),N,"Shtr Open"
+    stop = (R 166:180),N,"Shtr Open"
+    stop = (R 246:255),N,"Shtr Open"
+    
+    stop = (M  23: 85),1,"Strobe:"
+    stop = (M 101:165),1,"TrStr:"
+    stop = (M 181:245),1,"IrStr:"
+
+  parameter
+    name = "-SPEED-"
+    displayerNum = 11
+    type = F
+    attribList = 5
+    stop = (M 0:255),2,"SPD="
+
+  parameter
+    name = "-FX-"
+    displayerNum = 12
+    type = B
+    attribList = 16
+    stop = (    0:  9),N,"Free"
+    stop = (   10: 19),N,"FX 1"
+    stop = (   20: 29),N,"FX 2"
+    stop = (   30: 39),N,"FX 3"
+    stop = (   40: 49),N,"FX 4"
+    stop = (   50: 59),N,"FX 5"
+    stop = (   60: 69),N,"FX 6"
+    stop = (   70: 79),N,"FX 7"
+    stop = (   80: 89),N,"FX 8"
+    stop = (   90: 99),N,"FX 9"
+    stop = (  100:109),N,"FX 10"
+    stop = (  110:119),N,"FX 11"
+    stop = (  120:129),N,"FX 12"
+    stop = (  130:139),N,"FX 13"
+    stop = (  140:149),N,"FX 14"
+    stop = (  150:159),N,"FX 15"
+    stop = (  160:169),N,"FX 16"
+    stop = (  170:179),N,"FX 17"
+    stop = (  180:189),N,"FX 18"
+    stop = (  190:199),N,"FX 19"
+    stop = (  200:209),N,"FX 20"
+    stop = (  210:219),N,"FX 21"
+    stop = (  220:229),N,"FX 22"
+    stop = (  230:239),N,"FX 23"
+    stop = (  240:249),N,"FX 24"
+    stop = (  250:255),N,"FX 25"
+
+  parameter
+    name = "-CNLFNC-"
+    displayerNum = 13
+    type = N
+    attribList = 15
+    stop = (    0:  9),N,"Free"
+    stop = (   10: 14),N,"b/o rot"
+    stop = (   15: 19),N,"b/o col"
+    stop = (   20: 24),N,"no b/o"
+    stop = (   25: 29),N,"b/o gob"
+    stop = (   30: 34),N,"no b/o"
+    stop = (   35: 39),N,"no b/o"
+    stop = (   40: 44),N,"no b/o"
+    stop = (   45: 49),N,"reset ROT"
+    stop = (   50: 54),N,"reset INC"
+    stop = (   55: 59),N,"reset COL"
+    stop = (   60: 64),N,"reset APE"
+    stop = (   65: 69),N,"reset G1"
+    stop = (   70: 74),N,"reset GROT"
+    stop = (   75: 79),N,"reset G2"
+    stop = (   80: 84),N,"reset FOC"
+    stop = (   85: 89),N,"reset PRI"
+    stop = (   90: 99),N,"reset CHAN"
+    stop = (  100:129),N,"Free"
+    stop = (  193:255),N,"Sound Control"
+    
+    stop = (M 130:192),1,"RandProgSeq:"
+
+end
