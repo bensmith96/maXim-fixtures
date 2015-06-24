@@ -7,7 +7,7 @@
 fixture
   manufacturer = "ADJ"
   name = "SlimPar8"
-  version = 1.00
+  version = 1.01
 
   attribute
     name = "RED"
@@ -30,21 +30,21 @@ fixture
     homeVal = 0
 
   attribute
-    name = "STROBE"
+    name = "INTENSITY"
     channel = 5
+
+  attribute
+    name = "STROBE"
+    channel = 6
     homeVal = 0
 
   attribute
-    name = "INTENSITY"
-    channel = 6
-
-  attribute
-    name = "COLOUR FX"
+    name = "MODE"
     channel = 7
     homeVal = 0
 
   attribute
-    name = "FX"
+    name = "COLOR MACROS"
     channel = 8
     homeVal = 0
 
@@ -82,5 +82,41 @@ fixture
     name = "-STROBE-"
     displayerNum = 5
     type = B
-    attribList = 5
-    // find out STOPS.
+    attribList = 6
+    stop = (   0: 15),N,"StrobeOff"
+    stop = (M 16:255),2,"Strobe:"
+
+  parameter
+    name = "-MODE-"
+    displayerNum = 6
+    type = B
+    attribList = 7
+    stop = (   0: 51),N,"Dim"
+    stop = (  52:102),N,"ClrMacro"
+    stop = ( 103:153),N,"ClrChange"
+    stop = ( 154:204),N,"ClrFade"
+    stop = ( 205:255),N,"SoundActive"
+
+  parameter
+    name = "-SELECT-"
+    displayerNum = 7
+    type = B
+    attribList = 8
+    stop = (   0: 15),N,"1 NoClr"
+    stop = (  16: 31),N,"2 Red"
+    stop = (  32: 47),N,"3 Green"
+    stop = (  48: 63),N,"4 Blue"
+    stop = (  64: 79),N,"5 Amber"
+    stop = (  80: 95),N,"6 R!G"
+    stop = (  96:111),N,"7 R!B"
+    stop = ( 112:127),N,"8 R!A"
+    stop = ( 128:143),N,"9 G!B"
+    stop = ( 144:159),N,"10 G!A"
+    stop = ( 160:175),N,"11 B!A"
+    stop = ( 176:191),N,"12 R!G!B"
+    stop = ( 192:207),N,"13 R!G!A"
+    stop = ( 208:223),N,"14 R!B!A"
+    stop = ( 224:239),N,"15 G!B!A"
+    stop = ( 249:255),N,"16 R!G!B!A"
+
+end
