@@ -1,0 +1,86 @@
+////////////// American DJ SlimPar (8 channel mode)
+// LSC Lighting Systems
+// maXim fixture template
+// American DJ Slim Par (8)
+// Author B. Smith 24/6/2015
+
+fixture
+  manufacturer = "ADJ"
+  name = "SlimPar8"
+  version = 1.00
+
+  attribute
+    name = "RED"
+    channel = 1
+    homeVal = 0
+
+  attribute
+    name = "GREEN"
+    channel = 2
+    homeVal = 0
+
+  attribute
+    name = "BLUE"
+    channel = 3
+    homeVal = 0
+
+  attribute
+    name = "AMBER"
+    channel = 4
+    homeVal = 0
+
+  attribute
+    name = "STROBE"
+    channel = 5
+    homeVal = 0
+
+  attribute
+    name = "INTENSITY"
+    channel = 6
+
+  attribute
+    name = "COLOUR FX"
+    channel = 7
+    homeVal = 0
+
+  attribute
+    name = "FX"
+    channel = 8
+    homeVal = 0
+
+/////////////////////////////////////////////////////////////////////////
+
+  parameter
+    name = "-RED-"
+    displayerNum = 1
+    type = C
+    attribList = 1
+    stop = (M 0:255),2,"Red="
+
+  parameter
+    name = "-GRN-"
+    displayerNum = 2
+    type = C
+    attribList = 2
+    stop = (M 0:255),2,"Grn="
+
+  parameter
+    name = "-BLU-"
+    displayerNum = 3
+    type = C
+    attribList = 3
+    stop = (M 0:255),2,"Blu="
+
+  parameter
+    name = "-AMB-"
+    displayerNum = 4
+    type = C
+    attribList = 4
+    stop = (M 0:255),2,"Amb="
+
+  parameter
+    name = "-STROBE-"
+    displayerNum = 5
+    type = B
+    attribList = 5
+    // find out STOPS.
